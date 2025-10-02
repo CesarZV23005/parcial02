@@ -68,7 +68,7 @@ class Alumno
         <br>
         <button name="boton" type="submit">REGISTRAR</button>
         <?php
-        
+
         $database = new Database();
         $conn_temp = $database->getConnection();
         $stmt = $conn_temp->prepare("INSERT INTO tbl_alumno(nombre,telefono,fecha,direccion) VALUES(:nombre,:telefono,:fecha,:direccion)");

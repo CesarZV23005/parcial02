@@ -1,6 +1,5 @@
 version: "3.9"
 
-
 services:
   app:
     build:
@@ -14,7 +13,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
-
 
   db:
     image: mysql:8.0
@@ -35,7 +33,6 @@ services:
       retries: 20
       start_period: 10s
 
-
   phpmyadmin:
     image: phpmyadmin:latest
     container_name: phpmyadmin
@@ -46,10 +43,8 @@ services:
       PMA_HOST: db
       PMA_USER: root
       PMA_PASSWORD: rootpass
-  
-  ports:
+    ports:
       - "8082:80"           # phpMyAdmin en http://localhost:8081
-
 
 volumes:
   db_data:

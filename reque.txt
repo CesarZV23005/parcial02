@@ -1,0 +1,3 @@
+docker build -t ZV23005-mvc-php . 
+docker run -d --name  zv23005-mvc-container -p 8080:80 -v ./proyecto-mvc:/var/www/html zv23005-mvc-php
+docker-compose up -d --build
